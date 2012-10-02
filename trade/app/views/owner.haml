@@ -1,0 +1,20 @@
+%link(rel="stylesheet" type="text/css" href="/style.css")
+%h1 #{owner.name}
+%a{:href => "/logout"} Logout
+%ul
+  - for item in owner.items
+    - if item.status == 'active'
+      %li{:class => 'selected'}
+        #{item.name} (Price = #{item.price})
+        %a{:href => "/buy/#{item.name}"} Buy
+    - else
+      %li{:class => nil} #{item.name} (Price = #{item.price})
+%ul
+  %li{:class => 'selected'}
+    active
+  %li{:class => nil}
+    inactive
+
+%li{:class => nil} Your Credits: #{Warmup::User.by_name(current_name).credits}
+%hr
+Time: #{time.strftime("%H:%M:%S")}

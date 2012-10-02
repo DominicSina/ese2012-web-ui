@@ -1,0 +1,12 @@
+Task 3
+1)The client sends an request, that he wants to see a specific site to 
+  the server(for example: get /owner/Jim).
+  The Server then processes this request by looking at the verb and the following url.
+  Depending on these paramaters the server executes different actions like:
+  creating a HTML file or redirect the client.
+
+2)Get usually doesn't alter the original data. This is used to prevent the 
+  clients from altering important data on the server. If not it could result in 
+  unpredictable results or a client could even exploit something.
+
+3)In the Views. These are the acctual representation of what the client will see. 
